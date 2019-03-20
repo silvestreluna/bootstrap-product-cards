@@ -70,9 +70,15 @@ const printToDom = (divId, textToPrint) => {
 
 const cardBuilder = (array) => {
     let cardToBuild = '';
+    cardToBuild += `<div class="container">`;    
+    cardToBuild += `<div class="row">`;
     array.forEach((card)=> {
+        cardToBuild += `<div class="col-4">`;
         cardToBuild += `<h3>${card.title}</h3>`;
-    });
+        cardToBuild += `</div>`;
+    })
+    cardToBuild += `</div>`;
+    cardToBuild += `</div>`;
     printToDom('cards', cardToBuild);
 };
 
