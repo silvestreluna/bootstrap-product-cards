@@ -74,7 +74,15 @@ const cardBuilder = (array) => {
     cardToBuild += `<div class="row">`;
     array.forEach((card)=> {
         cardToBuild += `<div class="col-4">`;
-        cardToBuild += `<h3>${card.title}</h3>`;
+        cardToBuild +=   `<div class="card-header">${card.title}</div>`;
+        cardToBuild += `<div class="card" style="width: 18rem;">`;
+        cardToBuild += `<img src="${card.imageUrl}" class="card-img-top" alt="...">`;
+         cardToBuild += `<div class="card-body">`;
+         cardToBuild += `<h5 class="card-title">Card title</h5>`;
+         cardToBuild += `<p class="card-text">${card.description}</p>`;
+         cardToBuild += `<h6>${card.size}</h6>`;
+         cardToBuild += `</div>`;
+         cardToBuild +=  `</div>`;
         cardToBuild += `</div>`;
     })
     cardToBuild += `</div>`;
